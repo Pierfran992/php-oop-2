@@ -54,3 +54,17 @@ class Tipologia extends Prodotto {
 $dog = new Categoria("Cane");
 $cat = new Categoria("Gatto");
 
+
+// creo varie tipologie
+$cibo = new Tipologia("Cibo");
+$cucce = new Tipologia("Cucce");
+$gioco = new Tipologia("Gioco");
+
+// Creo vari prodotti
+$scatCat = new Prodotto("Scatoletta per Gatti con manzo e verdure", $cat, $cibo);
+$scatDog = new Prodotto("Scatoletta per Cani con manzo e verdure", $dog, $cibo);
+$cuccBigDog = new Prodotto("Cuccia per Cani di taglia grande", $dog, $cucce);
+$mouse = new Prodotto("Topolino il peluche per Gatti", $cat, $gioco);
+
+
+
