@@ -22,7 +22,7 @@ class Prodotto {
 }
 
 // creo la classe Categoria
-class Categoria extends Prodotto {
+class Categoria {
 
     private $categoria;
 
@@ -36,7 +36,7 @@ class Categoria extends Prodotto {
 }
 
 // creo la classe Tipologia
-class Tipologia extends Prodotto {
+class Tipologia {
     private $tipologia;
 
     public function __construct($tipologia){
