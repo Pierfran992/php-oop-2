@@ -15,7 +15,7 @@ class Prodotto {
     public function getProdotto() {
         return "<div>" . "<h3>" . $this -> name . "</h3>" 
             . $this -> categoria -> getCategory()
-            . "<span>" . $this -> prezzo . "</span>"
+            . "<span>Prezzo: " . $this -> prezzo . " €" . "</span>"
         . "</div>" . "<hr>"; 
     }
 
