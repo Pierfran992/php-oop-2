@@ -18,11 +18,11 @@ class Cibo extends Prodotto {
     }
 
     public function getProdotto() {
-        return "<div>" . "<h3>" . $this -> name . "</h3>" 
+        return "<div class='card'>" . "<h3>" . $this -> name . "</h3>" 
             . $this -> categoria -> getCategory()
             . $this -> getTipologia() . "<br>"
             . "<span>Prezzo: " . $this -> prezzo . " €" . "</span>" 
-        . "</div>" . "<hr>"; 
+        . "</div>"; 
     }
 }
 
