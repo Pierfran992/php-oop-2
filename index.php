@@ -15,13 +15,10 @@ class Prodotto {
 
     }
 
-    public function setProdotto() {
-        
-    }
 }
 
 // creo la classe Categoria
-class Categoria {
+class Categoria extends Prodotto {
 
     private $categoria;
 
@@ -31,7 +28,7 @@ class Categoria {
 }
 
 // creo la classe Tipologia
-class Tipologia {
+class Tipologia extends Prodotto {
     private $tipologia;
 
     public function __construct($tipologia){
