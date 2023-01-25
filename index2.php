@@ -36,19 +36,20 @@ class Categoria {
 class Cibo extends Prodotto {
     private $date;
 
-    public function __construct( Prodotto $name, Prodotto $categoria, $date){
+    public function __construct($name, Categoria $categoria, $date){
         $this->date = $date;
-        $this->name = $name;
-        $this -> categoria = $categoria;
+        // $this->name = $name;
+        // $this->categoria = $categoria;
+        parent::__construct($name, $categoria);
     }
 
     public function getTipologia(){
-        return "<span>Tipologia: " . $this->date . "</span>";
+        return "<span>Data di scadenza: " . $this->date . "</span>";
     }
 
     public function getProdotto() {
-        return "<div>" . "<h3>" . Prodotto :: $name . "</h3>" 
-            . Prodotto :: $categoria -> getCategory()
+        return "<div>" . "<h3>" . $this -> name . "</h3>" 
+            . $this -> categoria -> getCategory()
             . $this -> getTipologia() 
         . "</div>" . "<hr>"; 
     }
@@ -67,11 +68,9 @@ $cibi =
     new Cibo("Scatoletta per Gatti con manzo e verdure", $cat, "08-08-2023"),
 ];
 
-
 echo "<h1> Lista prodotti venduti </h1>";
 
 // stampo i prodotti in pagina
-foreach($prodotti as $prodotto){
-    echo $prodotto -> getProdotto();
+foreach($cibi as $cibo){
+    echo $cibo -> getProdotto();
 }
-
