@@ -13,7 +13,7 @@ class Prodotto {
     }
 
     public function getProdotto() {
-        return "<div>" . "<h1>" . $this -> name . "</h1>" 
+        return "<div>" . "<h3>" . $this -> name . "</h3>" 
             . $this -> categoria -> getCategory()
             . $this -> tipologia -> getTipologia()
         . "</div>" . "<hr>"; 
@@ -31,7 +31,7 @@ class Categoria extends Prodotto {
     }
 
     public function getCategory(){
-        return "<span>" . $this->categoria . "</span>" . "<br>";
+        return "<span>Categoria: " . $this->categoria . "</span>" . "<br>";
     }
 }
 
@@ -44,7 +44,7 @@ class Tipologia extends Prodotto {
     }
 
     public function getTipologia(){
-        return "<span>" . $this->tipologia . "</span>";
+        return "<span>Tipologia: " . $this->tipologia . "</span>";
     }
 }
 
@@ -66,8 +66,11 @@ $prodotti =
     new Prodotto("Scatoletta per Cani con manzo e verdure", $dog, $cibo),
     new Prodotto("Scatoletta per Gatti con manzo e verdure", $cat, $cibo),
     new Prodotto("Cuccia per Cani di taglia grande", $dog, $cucce),
-    new Prodotto("Topolino il peluche per Gatti", $cat, $gioco),
+    new Prodotto("Topolino in peluche per Gatti", $cat, $gioco),
 ];
+
+
+echo "<h1> Lista prodotti venduti </h1>";
 
 // stampo i prodotti in pagina
 foreach($prodotti as $prodotto){
