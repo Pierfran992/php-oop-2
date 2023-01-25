@@ -16,7 +16,7 @@ class Prodotto {
         return "<div>" . "<h1>" . $this -> name . "</h1>" 
             . $this -> categoria -> getCategory()
             . $this -> tipologia -> getTipologia()
-        . "</div>"; 
+        . "</div>" . "<hr>"; 
     }
 
 }
@@ -61,10 +61,16 @@ $cucce = new Tipologia("Cucce");
 $gioco = new Tipologia("Gioco");
 
 // Creo vari prodotti
-$scatCat = new Prodotto("Scatoletta per Gatti con manzo e verdure", $cat, $cibo);
-$scatDog = new Prodotto("Scatoletta per Cani con manzo e verdure", $dog, $cibo);
-$cuccBigDog = new Prodotto("Cuccia per Cani di taglia grande", $dog, $cucce);
-$mouse = new Prodotto("Topolino il peluche per Gatti", $cat, $gioco);
+$prodotti = 
+[
+    new Prodotto("Scatoletta per Cani con manzo e verdure", $dog, $cibo),
+    new Prodotto("Scatoletta per Gatti con manzo e verdure", $cat, $cibo),
+    new Prodotto("Cuccia per Cani di taglia grande", $dog, $cucce),
+    new Prodotto("Topolino il peluche per Gatti", $cat, $gioco),
+];
 
-
+// stampo i prodotti in pagina
+foreach($prodotti as $prodotto){
+    echo $prodotto -> getProdotto();
+}
 
