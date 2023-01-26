@@ -9,7 +9,7 @@ class Prodotto {
     private $prezzo;
 
     public function __construct( $name, Categoria $categoria, $prezzo){
-        $this-> setName($name);
+        $this->setName($name);
         $this->setCategoria($categoria);
         $this->setPrezzo($prezzo);
     }

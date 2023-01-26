@@ -6,7 +6,7 @@ require_once("Models/prodotto.php");
 class Cibo extends Prodotto {
     private $date;
 
-    public function __construct($name, Categoria $categoria, $date, $prezzo){
+    public function __construct($name, $categoria, $date, $prezzo){
         parent::__construct($name, $categoria, $prezzo);
         $this->setDate($date);
     }
@@ -26,7 +26,7 @@ class Cibo extends Prodotto {
 
     public function getProdotto() {
         return "<div class='card'>" . "<h3>" . parent :: getName() . "</h3>" 
-            // . $this -> categoria -> getCategory()
+            . $this -> getCategoria() -> getCategory()
             . $this -> getTipologia() . "<br>"
             . "<span>Prezzo: " . parent :: getPrezzo() . " €" . "</span>" 
         . "</div>"; 
