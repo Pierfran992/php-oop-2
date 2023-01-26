@@ -8,10 +8,18 @@ class Categoria {
     private $categoria;
 
     public function __construct($categoria){
+        $this->setCategoria($categoria);
+    }
+
+    public function setCategoria($categoria){
         $this->categoria = $categoria;
     }
 
+    public function getCategoria(){
+        return $this->categoria;
+    }
+
     public function getCategory(){
-        return "<span>Categoria: " . $this->categoria . "</span>" . "<br>";
+        return "<span>Categoria: " . $this->getCategoria() . "</span>" . "<br>";
     }
 }
